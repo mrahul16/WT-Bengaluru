@@ -1,0 +1,304 @@
+/*Common*/
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400';
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@import 'https://fonts.googleapis.com/css?family=Rancho';
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans:700';
+@font-face {
+    font-family: welcomeFont;
+    src: url(../fonts/GabrielWeissFriendsFont.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    display: none;
+    background-image: url("../img/weather/clear-day.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.clearfix {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#container {
+    /*    position: relative;*/
+}
+
+nav {
+    position: fixed;
+    height: 3.2em;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 3000;
+}
+
+#time {
+    display: inline-block;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+}
+
+#hh,
+#mm,
+#ss {
+    display: inline-block;
+    background-color: #2196F3;
+    float: left;
+    box-shadow: inset 0px 0px 7px -3px rgba(0, 0, 0, 0.75);
+    color: #FFF;
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1em;
+    padding: 1.1em .6em;
+    margin: 0;
+}
+
+#logo {
+    position: absolute;
+    height: 1.6em;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin: .8em auto;
+}
+
+#menu {
+    position: absolute;
+    height: 1.2em;
+    right: 0;
+    padding: 1em;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color .3s;
+}
+
+#menu:hover {
+    background-color: #009688;
+}
+
+#menu:active {
+    background-color: #00796B;
+}
+
+#nav-overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+}
+
+td {
+    padding-left: .2em;
+}
+
+td a {
+    color: #FFF;
+}
+
+.td-icon {
+    height: 1.6em;
+    width: 1.6em;
+    background-color: #777;
+    background: no-repeat center center;
+    background-size: 1em 1em;
+}
+
+tr:nth-child(3) a {
+    color: #F44336;
+}
+
+tr:nth-child(1) .td-icon {
+    background-image: url(../img/icons/home.svg);
+}
+
+tr:nth-child(2) .td-icon {
+    background-image: url(../img/icons/places.svg);
+}
+
+tr:nth-child(3) .td-icon {
+    background-image: url(../img/icons/weather-red.svg);
+}
+
+tr:nth-child(4) .td-icon {
+    background-image: url(../img/icons/gallery.svg);
+}
+
+tr:nth-child(5) .td-icon {
+    background-image: url(../img/icons/news.svg);
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/*Common*/
+
+main {
+    /*background-attachment: fixed;*/
+    color: #fff;
+}
+
+
+#today {
+    padding-top: 3.2em;
+    text-align: center;
+}
+
+#today-main {
+    position: relative;
+    width: auto;
+    margin: auto;
+    padding: 1em 0 0;
+}
+
+.center {
+    display: inline-block;
+    padding-right: 1em;
+}
+
+#temperature {
+    font-size: 5.6em;
+    padding-right: 0;
+}
+
+#degree {
+    font-size: 3em;
+    vertical-align: top;
+    padding-right: 0.5em;
+}
+
+#unit {
+    width: 2em;
+}
+
+.unit-label {
+    vertical-align: top;
+    width: 100%;
+    font-size: 2em;
+}
+
+#today-summary {
+    font-size: 1.4em;
+    margin-bottom: 0.4em;
+}
+
+.today-extra-row {
+    font-size: 0.8em;
+    margin-bottom: 0.4em;
+}
+
+.extra-row-item {
+    margin-right: 1em;
+}
+
+#heading-daily, #heading-hourly {
+    padding-left: 1em;
+}
+
+.forecast {
+    float: left;
+    width: 11.375%;
+    /*height: 10em;*/
+    box-sizing: border-box;
+    margin: 0.5%;
+    padding: 0.8em 1em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+.forecast:first-child {
+    margin-left: 1%;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.date {
+    margin-bottom: 0.8em;
+    font-weight: 600;
+}
+
+.day-icon {
+    margin-bottom: 0.4em;
+}
+
+.max {
+    font-size: 1.6em;
+}
+
+.day-summary {
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#graph {
+    width: 960px;
+    height: 320px;
+    margin: 1em auto auto;
+}
+
+.ct-grid {
+    stroke: white;
+}
+
+.ct-label {
+    fill: #eee;
+}
+
+.ct-labels {
+    fill: #eee;
+}
+
+.ct-label.ct-horizontal.ct-end {
+    color: #eee;
+}
+
+#heading-hourly {
+    margin-top: 1em;
+}
+
+#graph {
+    margin-bottom: 2em;
+}
+
+

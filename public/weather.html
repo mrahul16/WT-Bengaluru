@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/chartist.min.css">
+    <link href="css/weather.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="container">
+    <header>
+        <nav>
+            <div id="time"> <span id="hh"></span> <span id="mm"></span> <span id="ss"></span> </div> <img id="logo" src="img/bengaluru-logo.png" alt=""> <img id="menu" src="img/icons/menu.svg" alt="" onclick="toggleNav()"> </nav>
+        <div id="nav-overlay">
+            <div class="overlay-content">
+                <table>
+                    <tr>
+                        <td class="td-icon"></td>
+                        <td class="td-label"><a href="index.html">Home</a></td>
+                    </tr>
+                    <tr>
+                        <td class="td-icon"></td>
+                        <td class="td-label"><a href="places.html">Places</a></td>
+                    </tr>
+                    <tr>
+                        <td class="td-icon"></td>
+                        <td class="td-label"><a href="#">Weather</a></td>
+                    </tr>
+                    <tr>
+                        <td class="td-icon"></td>
+                        <td class="td-label"><a href="gallery.html">Gallery</a></td>
+                    </tr>
+                    <tr>
+                        <td class="td-icon"></td>
+                        <td class="td-label"><a href="news.html">News</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="today">
+            <div id="today-main">
+                <canvas id="today-icon" class="center" width="64" height="64"></canvas>
+                <span id="temperature" class="center convert"></span>
+                <span id="degree">°</span>
+                <!--<span id="unit center">-->
+                    <!--<span class="unit-label">C</span>-->
+                    <!--<span class="unit-label">F</span>-->
+                <!--</span>-->
+            </div>
+            <div id="today-summary">Partly cloudy</div>
+            <div class="today-extra-row">
+                <span class="extra-row-item">Feels like <span class="extra-row-item-value"></span>°</span>
+                <span class="extra-row-item">Wind <span class="extra-row-item-value"></span> km/h</span>
+                <span class="extra-row-item">Visibility <span class="extra-row-item-value"></span> km</span>
+            </div>
+            <div class="today-extra-row">
+                <span class="extra-row-item">Barometer <span class="extra-row-item-value"></span>mb</span>
+                <span class="extra-row-item">Humidity <span class="extra-row-item-value"></span> %</span>
+                <span class="extra-row-item">Dew Point <span class="extra-row-item-value"></span>°</span>
+            </div>
+
+        </section>
+
+        <section id="daily">
+            <h2 id="heading-daily">Daily</h2>
+            <div id="daily-forecast-container">
+                <aside class="forecast">
+                    <div class="date"></div>
+                    <canvas id="day1" class="day-icon" width="48" height="48"></canvas>
+                    <div class="temp-range">
+                        <span class="max"><span class="max-value"></span>°</span>
+                        <span class="min"><span class="min-value"></span>°</span>
+                    </div>
+                    <div class="day-summary">Partly cloudy</div>
+                </aside>
+                <aside class="forecast">
+                    <div class="date"></div>
+                    <canvas id="day2" class="day-icon" width="48" height="48"></canvas>
+                    <div class="temp-range">
+                        <span class="max"><span class="max-value"></span>°</span>
+                        <span class="min"><span class="min-value"></span>°</span>
+                    </div>
+                    <div class="day-summary">Partly cloudy</div>
+                </aside>
+                <aside class="forecast">
+                    <div class="date"></div>
+                    <canvas id="day3" class="day-icon" width="48" height="48"></canvas>
+                    <div class="temp-range">
+                        <span class="max"><span class="max-value"></span>°</span>
+                        <span class="min"><span class="min-value"></span>°</span>
+                    </div>
+                    <div class="day-summary">Partly cloudy</div>
+                </aside>
+                <aside class="forecast">
+                    <div class="date"></div>
+                    <canvas id="day4" class="day-icon" width="48" height="48"></canvas>
+                    <div class="temp-range">
+                        <span class="max"><span class="max-value"></span>°</span>
+                        <span class="min"><span class="min-value"></span>°</span>
+                    </div>
+                    <div class="day-summary">Partly cloudy</div>
+                </aside>
+                <aside class="forecast">
+                    <div class="date"></div>
+                    <canvas id="day5" class="day-icon" width="48" height="48"></canvas>
+                    <div class="temp-range">
+                        <span class="max"><span class="max-value"></span>°</span>
+                        <span class="min"><span class="min-value"></span>°</span>
+                    </div>
+                    <div class="day-summary">Partly cloudy</div>
+                </aside>
+                <aside class="forecast">
+                    <div class="date"></div>
+                    <canvas id="day6" class="day-icon" width="48" height="48"></canvas>
+                    <div class="temp-range">
+                        <span class="max"><span class="max-value"></span>°</span>
+                        <span class="min"><span class="min-value"></span>°</span>
+                    </div>
+                    <div class="day-summary">Partly cloudy</div>
+                </aside>
+                <aside class="forecast">
+                    <div class="date"></div>
+                    <canvas id="day7" class="day-icon" width="48" height="48"></canvas>
+                    <div class="temp-range">
+                        <span class="max"><span class="max-value"></span>°</span>
+                        <span class="min"><span class="min-value"></span>°</span>
+                    </div>
+                    <div class="day-summary">Partly cloudy</div>
+                </aside>
+                <aside class="forecast">
+                    <div class="date"></div>
+                    <canvas id="day8" class="day-icon" width="48" height="48"></canvas>
+                    <div class="temp-range">
+                        <span class="max"><span class="max-value"></span>°</span>
+                        <span class="min"><span class="min-value"></span>°</span>
+                    </div>
+                    <div class="day-summary">Partly cloudy</div>
+                </aside>
+            </div>
+            <div class="clearfix"></div>
+        </section>
+        <h2 id="heading-hourly">Hourly</h2>
+        <div id="graph" class="ct-chart"></div>
+    </main>
+</div>
+<script src="js/skycons.js"></script>
+<script src="js/chartist.min.js"></script>
+<script src="js/chartist-plugin-pointlabels.min.js"></script>
+<script src="js/weather.js"></script>
+</body>
+
+</html>

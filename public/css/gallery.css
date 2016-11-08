@@ -1,0 +1,259 @@
+/*Common*/
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400';
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@import 'https://fonts.googleapis.com/css?family=Rancho';
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans:700';
+
+@font-face {
+    font-family: welcomeFont;
+    src: url(../fonts/GabrielWeissFriendsFont.otf);
+}
+
+@font-face {
+    font-family: ACF;
+    src: url(../fonts/ACF.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    display: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 0;
+}
+
+.clearfix {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#container {
+}
+
+nav {
+    position: fixed;
+    height: 3.2em;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 3000;
+}
+
+#time {
+    display: inline-block;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+}
+
+#hh,
+#mm,
+#ss {
+    display: inline-block;
+    background-color: #2196F3;
+    float: left;
+    box-shadow: inset 0px 0px 7px -3px rgba(0, 0, 0, 0.75);
+    color: #FFF;
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1em;
+    padding: 1.1em .6em;
+    margin: 0;
+}
+
+#logo {
+    position: absolute;
+    height: 1.6em;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin: .8em auto;
+}
+
+#menu {
+    position: absolute;
+    height: 1.2em;
+    right: 0;
+    padding: 1em;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color .3s;
+}
+
+#menu:hover {
+    background-color: #009688;
+}
+
+#menu:active {
+    background-color: #00796B;
+}
+
+#nav-overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+}
+
+td {
+    padding-left: .2em;
+}
+
+td a {
+    color: #FFF;
+}
+
+.td-icon {
+    height: 1.6em;
+    width: 1.6em;
+    background-color: #777;
+    background: no-repeat center center;
+    background-size: 1em 1em;
+}
+
+tr:nth-child(4) a {
+    color: #F44336;
+}
+
+tr:nth-child(1) .td-icon {
+    background-image: url(../img/icons/home.svg);
+}
+
+tr:nth-child(2) .td-icon {
+    background-image: url(../img/icons/places.svg);
+}
+
+tr:nth-child(3) .td-icon {
+    background-image: url(../img/icons/weather.svg);
+}
+
+tr:nth-child(4) .td-icon {
+    background-image: url(../img/icons/gallery-red.svg);
+}
+
+tr:nth-child(5) .td-icon {
+    background-image: url(../img/icons/news.svg);
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*Common*/
+
+#title {
+    font-family: ACF, cursive;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    padding: 2.4em 1em 1em;
+}
+
+main {
+    padding: 0 2.5%;
+}
+
+.photo-link {
+    display: none;
+    width: 20%;
+    float: left;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    transition: box-shadow 0.35s;
+}
+
+.photo-link:hover {
+    z-index: 1;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.photo {
+    width: 100%;
+    object-fit: cover;
+}
+
+#page-num {
+    padding: 1em 0;
+    text-align: center;
+}
+
+#page-num-list {
+    display: block;
+    margin: auto;
+}
+
+.list-item {
+    display: inline-block;
+    padding: 0.8em;
+    border: 1px solid #3f51b5;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #3F51B5;
+    transition: all 0.35s;
+}
+
+.list-item.prevNext, .list-item.num:hover, .list-item.num.active {
+    color: #fff;
+    background-color: #3F51B5;
+}
+
+.list-item.prevNext:active, .list-item.num:active {
+    color: #fff;
+    background-color: #1A237E;
+    border-color: #1A237E;
+}
+
+#next {
+    border-bottom-right-radius: 32%;
+    border-top-right-radius: 32%;
+    padding-right: 1em;
+    margin-left: 4px;
+}
+
+#prev {
+    border-bottom-left-radius: 32%;
+    border-top-left-radius: 32%;
+    padding-right: 1em;
+}

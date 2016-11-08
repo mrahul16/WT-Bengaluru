@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link href="css/gallery.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/colorbox.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+</head>
+
+<body>
+<div id="container">
+    <header>
+        <nav>
+            <div id="time"><span id="hh"></span> <span id="mm"></span> <span id="ss"></span></div>
+            <img id="logo" src="img/bengaluru-logo.png" alt=""> <img id="menu" src="img/icons/menu.svg" alt=""
+                                                                     onclick="toggleNav()"></nav>
+        <div id="nav-overlay">
+            <div class="overlay-content">
+                <table>
+                    <tr>
+                        <td class="td-icon"></td>
+                        <td class="td-label"><a href="index.html">Home</a></td>
+                    </tr>
+                    <tr>
+                        <td class="td-icon"></td>
+                        <td class="td-label"><a href="places.html">Places</a></td>
+                    </tr>
+                    <tr>
+                        <td class="td-icon"></td>
+                        <td class="td-label"><a href="weather.html">Weather</a></td>
+                    </tr>
+                    <tr>
+                        <td class="td-icon"></td>
+                        <td class="td-label"><a href="#" onclick="toggleNav()">Gallery</a></td>
+                    </tr>
+                    <tr>
+                        <td class="td-icon"></td>
+                        <td class="td-label"><a href="news.html">News</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="title">The Gallery</div>
+    </header>
+    <main>
+        <a id="1" class="photo-link" href="">
+            <img src="img/gallery/placeholder.jpg" alt="" class="photo">
+        </a>
+    </main>
+    <div class="clearfix"></div>
+    <div id="page-num">
+        <ul id="page-num-list">
+            <li class="list-item prevNext" id="prev">PREV</li>
+            <li class="list-item prevNext" id="next">NEXT</li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+
+</div>
+<script src="js/GreenSock/TweenMax.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

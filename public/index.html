@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLpBjyAlTluJpzMACyNnJ8tlolyRum4U0"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div id="time"> <span id="hh"></span> <span id="mm"></span> <span id="ss"></span> </div> <img id="logo" src="img/bengaluru-logo.png" alt=""> <img id="menu" src="img/icons/menu.svg" alt="" onclick="toggleNav()"> </nav>
+        <div class="hero">
+            <div id="hero-image"></div>
+            <div id="intro">
+                <div id="intro-text">Welcome to Bengaluru, the number one south-Indian Cosmopolitan City. Experience the new modern face of India.</div>
+            </div>
+            <div id="build-up">
+                <div id="theArt">
+                    <div id="cube" class="show-front">
+                        <div class="front">
+                            <div class="amazing-fact">There existed a SeaPlane channel in the Bellandur Lake during the second world war. The seafaring Catalina planes would land in the Bellandur Lake &amp; then be towed to HAL Airport.</div>
+                            <div class="number-bar">
+                                <div class="slant"></div>
+                                <div class="number">1</div>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="amazing-fact">Bangalore has the country's longest city bus route. BMTC route no. 600 covers a distance of 117 kilometres per trip. One trip takes about six hours.</div>
+                            <div class="number-bar">
+                                <div class="slant"></div>
+                                <div class="number">2</div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="amazing-fact">Lalbagh is home to The Lal Bagh Rock, one of the oldest rock formations on earth, dating back to 3,000 million years and many trees that are more than a century old.</div>
+                            <div class="number-bar">
+                                <div class="slant"></div>
+                                <div class="number">3</div>
+                            </div>
+                        </div>
+                        <div class="top">
+                            <div class="amazing-fact">Bangalore is the only city in the world that has a commercial and defense airport operating from the same strip.</div>
+                            <div class="number-bar">
+                                <div class="slant"></div>
+                                <div class="number">5</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="amazing-fact">R.K. Narayan's fictional Malgudi town was named after Malleswaram and Basavanagudi as per one of his writings.</div>
+                            <div class="number-bar">
+                                <div class="slant"></div>
+                                <div class="number">4</div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="amazing-fact">National Institute of Mental Health and Neuro Sciences (NIMHANS) houses a brain museum with over 300 brain specimens.</div>
+                            <div class="number-bar">
+                                <div class="slant"></div>
+                                <div class="number">6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        <div class="shadow"></div>-->
+        <section class="three" id="one">
+            <aside>
+                <div class="content" id="location">
+                    <h3>Location</h3>
+                    <p>Bengaluru is located in the heart of Mysore Plateau in Karnataka, India. The city has an average elevation of 3000 feet.</p>
+                    <div class="more" onclick="openInfoDialog('map')">MORE</div>
+                </div>
+            </aside>
+            <aside>
+                <div class="content" id="getting-around">
+                    <h3>Getting around</h3>
+                    <p>Get around the city in a BMTC bus, Namma Metro train or get an Uber or Ola cab. Get more details on fares and public transport.</p>
+                    <div class="more" onclick="openInfoDialog('local-transport')">MORE</div>
+                </div>
+            </aside>
+            <aside>
+                <div class="content" id="currency">
+                    <h3>Money and costs</h3>
+                    <p>Indian Rupee(₹) is the official currency. Get more information on exchange rates currency exchange stores in and around Bengaluru. </p>
+                    <div class="more">MORE</div>
+                </div>
+            </aside>
+        </section>
+        <section class="places">
+            <h1>Places</h1>
+            <div id="cool-thing">
+                <div id="stage">
+                    <div id="shape" class="ring backfaces">
+                        <div class="plane one"></div>
+                        <div class="plane two"></div>
+                        <div class="plane three"></div>
+                        <div class="plane four"></div>
+                        <div class="plane five"></div>
+                        <div class="plane six"></div>
+                        <div class="plane seven"></div>
+                        <div class="plane eight"></div>
+                        <div class="plane nine"></div>
+                        <div class="plane ten"></div>
+                        <div class="plane eleven"></div>
+                        <div class="plane twelve"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum ipsum ac dolor iaculis, nec ultricies neque congue. Etiam a porttitor purus, non varius justo. Sed quis consequat odio. Mauris euismod placerat lorem eget interdum. Mauris nec sapien nisi. Pellentesque.</p>
+            <a class="button" href="places.html">CHECK IT OUT</a>
+        </section>
+        <section class="gallery">
+            <h1>Gallery</h1>
+            <div class="images"> <img src="img/carousel/galleryone.jpg" alt=""> <img src="img/carousel/gallerytwo.jpg" alt=""> <img src="img/carousel/gallerythree.jpg" alt=""> <img src="img/carousel/galleryfour.jpg" alt=""> <img src="img/carousel/galleryfive.jpg" alt=""> </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum ipsum ac dolor iaculis, nec ultricies neque congue. Etiam a porttitor purus, non varius justo. Sed quis consequat odio. Mauris euismod placerat lorem eget interdum. Mauris nec sapien nisi. Pellentesque.</p>
+            <a class="button" href="gallery.html">Check it out</a>
+        </section>
+        <section class="climate">
+            <!--            <div class="climate-content" id="climate-image"></div>-->
+            <div class="climate-content" id="climate-info">
+                <h1>CLIMATE</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum ipsum ac dolor iaculis, nec ultricies neque congue. Etiam a porttitor purus, non varius justo. Sed quis consequat odio. Mauris euismod placerat lorem eget interdum. Mauris nec sapien nisi. Pellentesque.</p>
+                <a class="button" href="weather.html">MORE</a>
+            </div>
+        </section>
+        <footer> &copy; 2016 Bengaluru. All rights reserved.
+            <ul>
+                <li>Privacy Policy</li>
+                <li>Terms and Conditions</li>
+                <li><a href="../admin/index.php">Admin Login</a></li>
+            </ul>
+        </footer>
+    </div>
+    <div class="dimmer"></div>
+    <div id="nav-overlay">
+        <div class="overlay-content">
+            <table>
+                <tr>
+                    <td class="td-icon"></td>
+                    <td class="td-label"><a href="#">Home</a></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"></td>
+                    <td class="td-label"><a href="places.html">Places</a></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"></td>
+                    <td class="td-label"><a href="weather.html">Weather</a></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"></td>
+                    <td class="td-label"><a href="gallery.html">Gallery</a></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"></td>
+                    <td class="td-label"><a href="news.html">News</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="overlay" id="map">
+        <div id="mapCanvas"></div>
+        <div id="mapLocDist">
+            <div class="location-info">
+                <h2 class="margin">LOCATION</h2>
+                <p class="margin">Located in southern India on the Deccan Plateau, Bengaluru is at a height of over 900 m (3,000 ft) above sea level. Bangalore is known for its pleasant climate throughout the year. Its elevation is the highest among the major large cities of India.</p>
+            </div>
+            <div class="distance-info">
+                <h2 class="margin">CHECK DISTANCE</h2>
+                <input class="margin" id="origin" type="text" onkeypress="findDistance(e)">
+                <div class="margin" id="distance"></div>
+            </div>
+        </div><span class="close"></span> </div>
+    <div class="overlay" id="local-transport"><span class="close"></span>
+        <div class="transport" id="bmtc">
+            <div class="image"></div>
+            <h2>BMTC</h2>
+            <div class="transport-info">BMTC has more than 6000 buses connecting every nook and corner of the city. Vayu Vajra Volvo buses connect the city to Bangalore International Airport.</div>
+            <div class="more-info"><a href="http://mybmtc.com/" target="_blank">More info...</a></div>
+        </div>
+        <div class="transport" id="metro">
+            <div class="image"></div>
+            <h2>Namma Metro</h2>
+            <div class="transport-info">Namma Metro is still a work in progress. There are currently 3 operational routes, with trains running every 15 mins from 6am to 10pm.</div>
+            <div class="more-info"><a href="http://www.bmrc.co.in/English/" target="_blank">More info...</a></div>
+        </div>
+        <div class="transport" id="cab">
+            <div class="image"></div>
+            <h2>Ola and Uber</h2>
+            <div class="transport-info">Ola and Uber are the biggest and cheapest providers of cab services in the city. Book a cab with their apps.</div>
+            <a href="https://www.olacabs.com/" class="cab-provider" target="_blank"><img src="img/icons/ola.png" alt="" id="ola"></a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.olacabs.customer&hl=en"><img src="img/icons/play-store.png" alt="" class="store play-store"></a>
+            <a target="_blank" href="https://itunes.apple.com/in/app/ola-cabs/id539179365"><img src="img/icons/apple-store.png" alt="" class="store apple-store"></a>
+            <a target="_blank" href="https://www.microsoft.com/en-in/store/apps/olacabs/9wzdncrdbv14"><img src="img/icons/windows-store.png" alt="" class="store windows-store"></a>
+            <a target="_blank" href="https://www.uber.com/cities/bangalore/" class="cab-provider"><img src="img/icons/uber.jpg" alt="" id="uber"></a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ubercab"><img src="img/icons/play-store.png" alt="" class="store play-store"></a>
+            <a target="_blank" href="https://itunes.apple.com/us/app/uber/id368677368"><img src="img/icons/apple-store.png" alt="" class="store apple-store"></a>
+            <a target="_blank" href="https://www.microsoft.com/en-us/store/p/uber/9wzdncrfhxrd"><img src="img/icons/windows-store.png" alt="" class="store windows-store"></a>
+        </div>
+    </div>
+    <div class="overlay" id="money"><span class="close"></span> </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

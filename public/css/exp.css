@@ -1,0 +1,12 @@
+#image {
+    height: 500px;
+    width: 500px;
+    background-image: url(../img/carousel/ringone.jpg);
+    background-size: cover;
+    background-position: center center;
+    transition: background-image 1s ease-out;
+}
+
+#image:hover {
+    background-image: url(../img/carousel/ringtwo.jpg);
+}

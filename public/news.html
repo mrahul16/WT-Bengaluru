@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+    <link href="css/news.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div id="time"> <span id="hh"></span> <span id="mm"></span> <span id="ss"></span> </div> <img id="logo" src="img/bengaluru-logo.png" alt=""> <img id="menu" src="img/icons/menu.svg" alt="" onclick="toggleNav()"> </nav>
+            <div id="nav-overlay">
+                <div class="overlay-content">
+                    <table>
+                        <tr>
+                            <td class="td-icon"></td>
+                            <td class="td-label"><a href="index.html">Home</a></td>
+                        </tr>
+                        <tr>
+                            <td class="td-icon"></td>
+                            <td class="td-label"><a href="places.html">Places</a></td>
+                        </tr>
+                        <tr>
+                            <td class="td-icon"></td>
+                            <td class="td-label"><a href="weather.html">Weather</a></td>
+                        </tr>
+                        <tr>
+                            <td class="td-icon"></td>
+                            <td class="td-label"><a href="gallery.html">Gallery</a></td>
+                        </tr>
+                        <tr>
+                            <td class="td-icon"></td>
+                            <td class="td-label"><a href="#">News</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="title-container">
+                <div id="title-background">
+                    <h1 id="title">BENGALURU NEWS</h1> </div>
+            </div>
+        </header>
+        <main>
+            <section id="news-scroll">
+                <div id="news-list-container">
+                   <div id="loading">Loading...</div>
+                    <ul id="news-list">
+                        <li class="news-list-item">
+                            <div class="news-thumbnail"></div>
+                            <div class="news-list-title">Title text</div>
+                            <div class="news-list-text">Some news title that can and has to span multiple lines. Some news title that can and has to span multiple lines.</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="news-type">
+                    <div id="currently-selected" onclick="toggleCategory()"> 
+                        <img src="img/icons/recent.svg" alt="" id="current-news-icon">
+                        <span id="current-news-text">RECENT</span>
+                    </div>
+                    <ul id="categories">
+                        <li class="type">
+                        <img src="img/icons/recent.svg" alt="" class="type-icon">
+                        RECENT</li>
+                        <li class="type">
+                        <img src="img/icons/city.svg" alt="" class="type-icon">CITY</li>
+                        <li class="type">
+                        <img src="img/icons/politics.svg" alt="" class="type-icon">POLITICS</li>
+                        <li class="type">
+                        <img src="img/icons/education.svg" alt="" class="type-icon">EDUCATION</li>
+                        <li class="type">
+                        <img src="img/icons/sports.svg" alt="" class="type-icon">SPORTS</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="news-info">
+                <div id="info-title-container">
+                    <h1 id="info-title">Title text</h1>
+                    <h6 id="timestamp">1097864358923</h6> </div>
+                <figure id="info-image"></figure>
+                <p id="info-text">Some news title that can and has to span multiple lines. Some news title that can and has to span multiple lines. Some news title that can and has to span multiple lines. Some news title that can and has to span multiple lines. Some news title that can and has to span multiple lines. Some news title that can and has to span multiple lines. Some news title that can and has to span multiple lines. Some news title that can and has to span multiple lines. Some news title that can and has to span multiple lines. Some news title that can and has to span multiple lines.</p>
+            </section>
+        </main>
+        <div class="clearfix"></div>
+    </div>
+    <script src="js/news.js"></script>
+</body>
+
+</html>

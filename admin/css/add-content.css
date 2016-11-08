@@ -1,0 +1,172 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400';
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans:700';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body {
+    background: #e8eaf6;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+#header {
+    background-color: #1A237E;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+#logo {
+    position: absolute;
+    margin: 16px;
+    height: 32px;
+    transition: all 0.5s;
+}
+
+#heading {
+    transition: all 0.25s;
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    font-size: 24px;
+    top: 32px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #E9EAF0;
+    text-decoration: none;
+}
+
+.top-right {
+    display: inline-block;
+    transition: all 0.25s;
+    float: right;
+    margin-top: 18px;
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+}
+
+#btlogout {
+    color: #E9EAF0;
+}
+
+#other-page {
+    border-right: 1px solid #fff;
+}
+
+#form {
+    transition: all 0.25s;
+    margin: 128px auto auto;
+    background-color: #3f51b5;
+    width: 500px;
+    padding: 28px 4%;
+    color: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+label {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+input,
+textarea,
+select {
+    display: block;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 16px;
+}
+
+input[type="text"], textarea {
+    width: 96%;
+    border-bottom: 2px solid #E8EAF6;
+    padding: 4px;
+}
+
+input[type="submit"] {
+    transition: all 0.3s;
+    display: inline-block;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    padding: 8px 28px;
+    font-size: 16px;
+    color: #E91E63;
+    background-color: #fff;
+    font-weight: bold;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+input[type="submit"]:active {
+    background-color: #FCE4EC;
+}
+
+select {
+    padding: 4px;
+    border-bottom: 2px solid #E8EAF6;
+}
+
+option {
+    color: #000;
+    padding: 4px;
+}
+
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 0;
+    resize: none;
+    box-shadow: inset 0px 0px 20px -8px rgba(0,0,0,0.75);
+    padding: 8px;
+}
+
+#formSubmitMessage {
+    display: inline-block;
+    transition: all 0.35s;
+    opacity: 0;
+    position: fixed;
+    top: 96px;
+    right: 32px;
+    padding: 16px;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+#formexit {
+    display: none;
+    transition: all 0.35s;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    margin: 8px;
+    font-size: 32px;
+    opacity: 0;
+    color: #3F51B5;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#formexit:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}

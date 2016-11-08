@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple login form</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="../public/js/jquery.min.js"></script> </head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            <h1 class="login-heading">
+      <strong>Welcome.</strong> Please login.</h1>
+            <form method="post" action="" onsubmit="return false;">
+                <input id="username" type="text" name="username" placeholder="Username" required="required" class="input-txt" />
+                <input id="password" type="password" name="password" placeholder="Password" required="required" class="input-txt" />
+                <div class="login-footer"> <a href="#" class="lnk"> I've forgotten something </a>
+                    <button id="submit" class="btn btn--right">Sign in </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function login() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+            if(!username || !password){
+                return false;
+            }
+            var clean_obj = {
+                username: username
+                , password: password
+            };
+            $.ajax({
+                url: "login.php"
+                , method: "POST"
+                , data: clean_obj
+                , beforeSend: function (xhr) {
+                    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                }
+            }).done(function (data) {
+                if(data == 1) {
+                    alert("Invalid username or password.")
+                }
+                else {
+                    window.location.href = "index.php";
+                }
+            });
+        }
+        $("#submit").on('click', function (event) {
+            event.preventDefault();
+            login();
+        });
+    </script>
+</body>
+
+</html>

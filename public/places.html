@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Places</title>
+    <!--    Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700|Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="css/places.css">
+</head>
+
+<body>
+<header>
+    <nav>
+        <div id="nav-bar">
+            <div id="time"><span id="hh"></span> <span id="mm"></span> <span id="ss"></span></div>
+            <img id="logo" src="img/bengaluru-logo.png" alt=""> <img id="menu" src="img/icons/menu.svg" alt=""
+                                                                     onclick="toggleNav()"></div>
+        <div id="nav-overlay">
+            <table>
+                <tr>
+                    <td class="td-icon"></td>
+                    <td class="td-label"><a href="index.html">Home</a></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"></td>
+                    <td class="td-label"><a href="#">Places</a></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"></td>
+                    <td class="td-label"><a href="weather.html">Weather</a></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"></td>
+                    <td class="td-label"><a href="gallery.html">Gallery</a></td>
+                </tr>
+                <tr>
+                    <td class="td-icon"></td>
+                    <td class="td-label"><a href="news.html">News</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="nav-places"><span></span> <span></span> <span></span> <span></span></div>
+    </nav>
+</header>
+<div id="places-container">
+    <section id="pictures-container">
+        <div class="fig-container">
+            <figure class="fig one active"></figure>
+        </div>
+        <div class="fig-container">
+            <figure class="fig two"></figure>
+        </div>
+        <div class="fig-container">
+            <figure class="fig three"></figure>
+        </div>
+        <div class="fig-container">
+            <figure class="fig four"></figure>
+        </div>
+        <div class="fig-container">
+            <figure class="fig five"></figure>
+        </div>
+        <div class="fig-container">
+            <figure class="fig six"></figure>
+        </div>
+        <div class="fig-container">
+            <figure class="fig seven"></figure>
+        </div>
+        <div class="fig-container">
+            <figure class="fig eight"></figure>
+        </div>
+        <div class="fig-container">
+            <figure class="fig nine"></figure>
+        </div>
+        <div class="fig-container">
+            <figure class="fig ten"></figure>
+        </div>
+    </section>
+    <main>
+        <h1 id="title">LAL BAGH</h1>
+        <figure id="background"></figure>
+        <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor risus nec odio pulvinar
+            euismod. Mauris vestibulum sed nulla ut semper. Aenean et nulla venenatis, consequat eros vitae, rhoncus
+            ligula. Proin tristique vehicula ipsum, ut volutpat lorem faucibus eu. Donec iaculis enim diam. Nulla
+            bibendum fermentum congue. Morbi quam purus, fermentum non feugiat in, efficitur sit amet erat. Sed
+            tristique aliquet aliquam. Aenean lacinia auctor nisi, nec rhoncus neque. Pellentesque ullamcorper dignissim
+            leo in dignissim. Nullam non lacus eget arcu sagittis tristique ut ac ipsum. Fusce efficitur elit nec dui
+            convallis finibus. Aliquam molestie tristique convallis. Phasellus maximus nibh ac egestas feugiat.
+        </article>
+
+    </main>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/GreenSock/TweenMax.js"></script>
+<script src="js/GreenSock/TimelineMax.js"></script>
+<script src="js/description.js"></script>
+<script src="js/places.js"></script>
+</body>
+
+</html>

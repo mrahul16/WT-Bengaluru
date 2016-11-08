@@ -1,0 +1,543 @@
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans:700';
+
+/*Normalize*/
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+figure {
+    margin: 0;
+}
+
+
+/*Normalize end*/
+
+
+/*Header and nav*/
+
+nav div#nav-bar {
+    position: fixed;
+    height: 3.2em;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 1000;
+}
+
+nav div#time {
+    display: inline-block;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+}
+
+nav div#time span#hh,
+nav div#time span#mm,
+nav div#time span#ss {
+    display: inline-block;
+    background-color: #2196F3;
+    float: left;
+    box-shadow: inset 0px 0px 7px -3px rgba(0, 0, 0, 0.75);
+    color: #FFF;
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1em;
+    padding: 1.1em .6em;
+    margin: 0;
+}
+
+nav img {
+    position: absolute;
+}
+
+nav img#logo {
+    height: 1.6em;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin: .8em auto;
+}
+
+nav img#menu {
+    height: 1.2em;
+    right: 0;
+    padding: 1em;
+    /*    margin-right: .4em;*/
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color .3s;
+}
+
+nav img#menu:hover {
+    background-color: #009688;
+}
+
+nav img#menu:active {
+    background-color: #00796B;
+}
+
+#nav-overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: height .5s ease-out;
+}
+
+#nav-overlay table {
+    position: relative;
+    border-collapse: collapse;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    top: 25%;
+    margin: 0 auto;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+    padding-left: .2em;
+}
+
+table tr td a {
+    color: #FFF;
+}
+
+td.td-icon {
+    height: 1.6em;
+    width: 1.6em;
+    background-color: #777;
+    background: no-repeat center center;
+    background-size: 1em 1em;
+}
+
+tr:nth-child(2) td.td-label a {
+    color: #F44336;
+}
+
+tr:nth-child(1) td.td-icon {
+    background-image: url(../img/icons/home.svg);
+}
+
+tr:nth-child(2) td.td-icon {
+    background-image: url(../img/icons/places-red.svg);
+}
+
+tr:nth-child(3) td.td-icon {
+    background-image: url(../img/icons/weather.svg);
+}
+
+tr:nth-child(4) td.td-icon {
+    background-image: url(../img/icons/gallery.svg);
+}
+
+tr:nth-child(5) td.td-icon {
+    background-image: url(../img/icons/news.svg);
+}
+
+nav div#nav-places {
+    position: fixed;
+    height: 100vh;
+    width: 3em;
+    z-index: 998;
+    padding-top: 3.2em;
+    background-color: #37474F;
+    -webkit-box-shadow: inset -2px 2px 10px 0px rgba(38, 50, 56, 1);
+    -moz-box-shadow: inset -2px 2px 10px 0px rgba(38, 50, 56, 1);
+    box-shadow: inset -2px 2px 10px 0px rgba(38, 50, 56, 1);
+}
+
+#nav-places span {
+    display: block;
+    height: 3em;
+    width: 3em;
+    background-size: 1.4em 1.4em;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#nav-places span:nth-child(1) {
+    height: 6em;
+    background-image: url(../img/icons/places.svg);
+}
+
+#nav-places span:nth-child(2) {
+    background-image: url(../img/icons/tourist.svg);
+}
+
+#nav-places span:nth-child(3) {
+    background-image: url(../img/icons/mall.svg);
+}
+
+#nav-places span:nth-child(4) {
+    background-image: url(../img/icons/restobar.svg);
+}
+
+
+/*Header and nav end*/
+
+
+/*Pictures*/
+
+
+/*
+#pictures {
+    padding: 4em 0 3.2em 3em;
+    background-color: #FF5722;
+}
+
+#cool-thing {
+    width: 100%;
+    height: 200px;
+    -webkit-perspective: 800;
+    -webkit-perspective-origin: 50% 125px;
+}
+
+#shape {
+    position: relative;
+    top: 4em;
+    margin: 0 auto;
+    height: 100px;
+    width: 200px;
+    -webkit-transform-style: preserve-3d;
+}
+
+.plane {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    border: 2px solid #FFF;
+    -webkit-box-sizing: border-box;
+    text-align: center;
+    font-family: Times, serif;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.6);
+    background: no-repeat center center;
+    background-size: 200px 100px;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+*/
+
+
+/*
+#pictures {
+    padding: 3.2em 0 3.2em 3em;
+    background-color: #FF5722;
+}
+
+#cool-thing {
+    width: 100%;
+    height: 200px;
+}
+*/
+
+
+/*
+#stage {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 2s;
+    -webkit-transform-style: preserve-3d;
+}
+*/
+
+
+/*
+#shape {
+    position: relative;
+    top: 3.2em;
+    height: 100px;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+}
+*/
+
+
+/*
+.plane {
+    position: relative;
+    height: 100px;
+    width: 10%;
+    border: 2px solid #FFF;
+    -webkit-box-sizing: border-box;
+    text-align: center;
+    font-family: Times, serif;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.6);
+    background: no-repeat center center;
+    background-size: 200px 100px;
+    -webkit-transition: -webkit-transform 2s, opacity 2s;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    float: left;
+}
+*/
+
+
+/*
+#shape.backfaces .plane {
+    -webkit-backface-visibility: visible;
+}
+*/
+
+
+/*
+#shape {
+    -webkit-animation: spin 24s infinite linear;
+}
+*/
+
+
+/*
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotateY(0);
+    }
+    to {
+        -webkit-transform: rotateY(-360deg);
+    }
+}
+*/
+
+
+/*
+.plane.eleven {
+    background-image: url(../img/carousel/ringeleven.jpg);
+}
+
+.plane.twelve {
+    background-image: url(../img/carousel/ringtwelve.jpg);
+}
+*/
+
+
+/* ---------- ring styles ------------- */
+
+
+/*
+.ring > .one {
+    -webkit-transform: rotateY(-144deg) translateZ(310px);
+}
+
+.ring > .two {
+    -webkit-transform: rotateY(-108deg) translateZ(310px);
+}
+
+.ring > .three {
+    -webkit-transform: rotateY(-72deg) translateZ(310px);
+}
+
+.ring > .four {
+    -webkit-transform: rotateY(-36deg) translateZ(310px);
+}
+
+.ring > .five {
+    -webkit-transform: translateZ(310px);
+}
+
+.ring > .six {
+    -webkit-transform: rotateY(36deg) translateZ(310px);
+}
+
+.ring > .seven {
+    -webkit-transform: rotateY(72deg) translateZ(310px);
+}
+
+.ring > .eight {
+    -webkit-transform: rotateY(108deg) translateZ(310px);
+}
+
+.ring > .nine {
+    -webkit-transform: rotateY(144deg) translateZ(310px);
+}
+
+.ring > .ten {
+    -webkit-transform: rotateY(180deg) translateZ(310px);
+}
+*/
+
+
+/*Pictures end*/
+
+div#places-container {
+    padding: 3.2em 0 0 3em;
+}
+
+section#pictures-container {
+    width: 100%;
+    height: 108px;
+    z-index: 10;
+}
+
+section#pictures-container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section#pictures-container div.fig-container {
+    height: 108px;
+    width: 10%;
+    background-color: #607D8B;
+    float: left;
+    -webkit-box-shadow: inset 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+}
+
+section#pictures-container figure.fig {
+    box-sizing: border-box;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    background-size: cover;
+    border: 2px solid #FFF;
+    transition: all .35s;
+}
+
+section#pictures-container figure.fig.active {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 4px solid #FFF;
+}
+
+
+/*
+section#pictures-container .fig.one {
+    background-image: url(../img/carousel/ringone.jpg);
+}
+
+section#pictures-container .fig.two {
+    background-image: url(../img/carousel/ringtwo.jpg);
+}
+
+section#pictures-container .fig.three {
+    background-image: url(../img/carousel/ringthree.jpg);
+}
+
+section#pictures-container .fig.four {
+    background-image: url(../img/carousel/ringfour.jpg);
+}
+
+section#pictures-container .fig.five {
+    background-image: url(../img/carousel/ringfive.jpg);
+}
+
+section#pictures-container .fig.six {
+    background-image: url(../img/carousel/ringsix.jpg);
+}
+
+section#pictures-container .fig.seven {
+    background-image: url(../img/carousel/ringseven.jpg);
+}
+
+section#pictures-container .fig.eight {
+    background-image: url(../img/carousel/ringeight.jpg);
+}
+
+section#pictures-container .fig.nine {
+    background-image: url(../img/carousel/ringnine.jpg);
+}
+
+section#pictures-container .fig.ten {
+    background-image: url(../img/carousel/ringten.JPG);
+}
+*/
+
+
+/*
+section#pictures .fig.one.open {
+    left: 0%;
+}
+
+section#pictures .fig.two.open {
+    left: 10%;
+}
+
+section#pictures .fig.three.open {
+    left: 20%;
+}
+
+section#pictures .fig.four.open {
+    left: 30%;
+}
+
+section#pictures .fig.five.open {
+    left: 40%;
+}
+
+section#pictures .fig.six.open {
+    left: 50%;
+}
+
+section#pictures .fig.seven.open {
+    left: 60%;
+}
+
+section#pictures .fig.eight.open {
+    left: 70%;
+}
+
+section#pictures .fig.nine.open {
+    left: 80%;
+}
+
+section#pictures .fig.ten.open {
+    left: 90%;
+}
+*/
+
+
+main {
+}
+
+h1 {
+    text-align: center;
+    padding: .6em 0;
+    font-size: 1.6em;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    background-color: #607D8B;
+    box-shadow: -1px 4px 16px -3px rgba(0,0,0,0.75);
+
+}
+
+article {
+    padding: 1.2em 2em;
+    line-height: 1.4em;
+    font-size: 1.1em;
+    box-shadow: -1px -4px 16px -3px rgba(0,0,0,0.75);
+}
+
+#background {
+    width: 60%;
+    height: 320px;
+    margin: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image .35s;
+    background-position: center;
+    margin-top: 1.6em;
+}
