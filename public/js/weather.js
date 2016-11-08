@@ -230,7 +230,7 @@ $(document).ready(function () {
     // icons.play();
 
     $.ajax({
-        url: "https://api.darksky.net/forecast/b8524128ae4aa63cec3cc720b9c73f7a/12.9716,77.5946?units=si"
+        url: "https://api.darksky.net/forecast/YOUR_API_KEY/12.9716,77.5946?units=si"
         // url: "https://gist.githubusercontent.com/RahulMaru1318/5e04eaef10f1d458a62408fb4065f48f/raw/2c1042ab10a6fbf7e1e384492ae2fb92985510a2/data.json"
         // url: "data.json"
         , method: "GET"
